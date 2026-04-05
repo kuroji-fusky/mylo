@@ -1,0 +1,22 @@
+{
+  "contributes": {
+    "languages": [
+      {
+        "id": "mylo",
+        "extensions": [
+          ".mylo"
+        ],
+        "aliases": [
+          "Mylo"
+        ]
+      }
+    ],
+    "grammars": [
+      {
+        "language": "mylodsl",
+        "scopeName": "source.mylo",
+        "path": "./syntaxes/mylodsl.tmLanguage.json"
+      }
+    ]
+  }
+}
