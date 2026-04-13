@@ -1,8 +1,8 @@
 # Mylo DSL
 
-Le cross-languge schema/type generator and transformer, kinda like Prisma but
-general purpose for generating types or schema from TypeScript, Python, Go,
-Rust, etc.
+A cross-languge schema/type generator and transformer, akin to Prisma but
+general purpose for generating types or schema from JSON and Zod, and from
+static-typed languages from TypeScript, Python, Go, Rust, etc.
 
 ## Example
 
@@ -22,7 +22,16 @@ schema ZPDCitizen {
 }
 ```
 
-And you instantly generate to whatever language you prefer to target:
+Then you instantly generate to Zod or whatever language you prefer to target:
+
+From **Mylo** → **Zod**
+```ts
+const zpdCitizen = z.object({
+  name: z.string(),
+  nickname: z.string().optional(),
+  role: z.union([Role, z.null()])
+})
+```
 
 From **Mylo** → **TypeScript**
 ```ts
